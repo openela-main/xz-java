@@ -2,7 +2,7 @@
 
 Name:           xz-java
 Version:        1.8
-Release:        14%{?dist}
+Release:        15%{?dist}
 Summary:        Java implementation of XZ data compression
 License:        Public Domain
 URL:            http://tukaani.org/xz/java.html
@@ -56,6 +56,9 @@ mkdir -p extdoc && touch extdoc/package-list
 %license COPYING
 
 %changelog
+* Wed Nov 20 2024 Marián Konček <mkoncek@redhat.com> - 1.8-15
+- Rebuild with regenerated Requires on Java
+
 * Tue Aug 10 2021 Mohan Boddu <mboddu@redhat.com> - 1.8-14
 - Rebuilt for IMA sigs, glibc 2.34, aarch64 flags
   Related: rhbz#1991688
