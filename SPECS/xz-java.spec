@@ -2,11 +2,12 @@
 
 Name:           xz-java
 Version:        1.8
-Release:        15%{?dist}
+Release:        20%{?dist}
 Summary:        Java implementation of XZ data compression
 License:        Public Domain
 URL:            http://tukaani.org/xz/java.html
 BuildArch:      noarch
+ExclusiveArch:  aarch64 ppc64le s390x x86_64 noarch
 
 Source0:        http://tukaani.org/xz/xz-java-%{version}.zip
 
@@ -56,6 +57,21 @@ mkdir -p extdoc && touch extdoc/package-list
 %license COPYING
 
 %changelog
+* Sat Nov 23 2024 Marián Konček <mkoncek@redhat.com> - 1.8-20
+- Add noarch to ExclusiveArch
+
+* Fri Nov 22 2024 Marián Konček <mkoncek@redhat.com> - 1.8-19
+- Disable building on i686
+
+* Fri Nov 22 2024 Marián Konček <mkoncek@redhat.com> - 1.8-18
+- Rebuild
+
+* Fri Nov 22 2024 Marián Konček <mkoncek@redhat.com> - 1.8-17
+- Rebuild
+
+* Fri Nov 22 2024 Marián Konček <mkoncek@redhat.com> - 1.8-16
+- Rebuild
+
 * Wed Nov 20 2024 Marián Konček <mkoncek@redhat.com> - 1.8-15
 - Rebuild with regenerated Requires on Java
 
